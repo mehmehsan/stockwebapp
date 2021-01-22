@@ -26,6 +26,7 @@ const[error,showError]=useState();
   fetch(query)
     .then((response) => response.json())
     .then((data) =>  {
+      showError();
       selectPrice((+data.["Time Series (Daily)"].[purchaseDate].["4. close"]).toFixed(3));
       
       fetch(query)
@@ -46,12 +47,13 @@ const[error,showError]=useState();
     
       }
     )
-    .catch((error)=>{showError("Prices not available for Selected data",error)
-  setOptn();
-  setpurchaseDate();
-  selectPrice(0);
-  showNumshares(0);
-setcurrentPrice(0);
+    .catch((error)=>{showError("Prices not available for Selected data",error);
+   
+
+  
+  selectPrice();
+ 
+setcurrentPrice();
 })
   }
   
