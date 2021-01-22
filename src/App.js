@@ -49,9 +49,9 @@ const[error,showError]=useState();
     .catch((error)=>{showError("Prices not available for Selected data",error)
   setOptn();
   setpurchaseDate();
-  selectPrice();
-  showNumshares();
-setcurrentPrice();
+  selectPrice(0);
+  showNumshares(0);
+setcurrentPrice(0);
 })
   }
   
