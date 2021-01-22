@@ -5,9 +5,10 @@ var date;
 function App() {
   const [optn, setOptn] = useState();
   const [purchaseDate, setpurchaseDate] = useState();
-  const[price,selectPrice]=useState();
-const[numshares, showNumshares]= useState();
-const[currentPrice,setcurrentPrice]=useState();
+  const[price,selectPrice]=useState(0);
+const[numshares, showNumshares]= useState(0);
+const[currentPrice,setcurrentPrice]=useState(0);
+const[error,showError]=useState();
 
   function quantityHandler(e){
     var numshares = e.target.value;
@@ -45,6 +46,7 @@ const[currentPrice,setcurrentPrice]=useState();
     
       }
     )
+    .catch((error)=>showError("Prices not available for Selected data",error))
   }
   
   return (
@@ -70,6 +72,8 @@ const[currentPrice,setcurrentPrice]=useState();
       <p> Per Share price : {price} as on {purchaseDate} </p>
       <p> Buying price : ₹ {numshares*price} /- </p>
       <p> Current Price : ₹ {numshares*currentPrice} /- </p>
+      <p> Profit / Loss : ₹ {numshares*currentPrice-numshares*price} /- </p>
+      {error}
     </div>
   );
 }
