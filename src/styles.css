@@ -19,7 +19,7 @@ select {
   width: 9.1rem;
 }
 #input {
-  max-width: 85%;
+  max-width: 95%;
   margin: 5rem 3rem;
 }
 
@@ -29,7 +29,7 @@ select {
 
 #output {
   border: solid white;
-  margin: 2rem;
+  margin: 2rem 2rem;
   border-radius: 2rem;
   padding: 2rem 2rem;
 }
