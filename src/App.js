@@ -27,12 +27,12 @@ function darkMode(){
 if(cnt%2!==0){
     setBck("white");
     setFnt("black");    
-    setTxtalign("left");}
+    setTxtalign("right");}
     else{
       
     setBck("black");
     setFnt("white");
-    setTxtalign("right");
+    setTxtalign("left");
     }
     setCnt(cntt++);
 
