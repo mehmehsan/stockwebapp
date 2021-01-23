@@ -33,3 +33,11 @@ select {
   border-radius: 2rem;
   padding: 2rem 2rem;
 }
+
+#outerSwitch {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  float: right;
+}
