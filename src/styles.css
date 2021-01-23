@@ -11,7 +11,6 @@ input,
 select {
   width: 8rem;
 
-  float: right;
   background-color: grey;
   padding: 0.5rem 0.5rem;
 }
@@ -21,10 +20,6 @@ select {
 #input {
   max-width: 65%;
   margin: auto;
-}
-
-#input label {
-  float: left;
 }
 
 #output {
