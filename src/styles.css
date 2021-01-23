@@ -40,3 +40,7 @@ select {
   margin: 1rem;
   float: right;
 }
+
+svg {
+  margin: auto 1rem;
+}
