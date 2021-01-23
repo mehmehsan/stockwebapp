@@ -129,7 +129,7 @@ if(cnt%2!==0){
       <input type="date" onChange={eventHandler} />
       </div>
     <div id="output">
-      <p> Stock : <strong style={{color:"blue"}}> {optn} </strong> </p>
+      <p> Stock :  <strong> {optn} </strong> </p>
       
       <p> Per Share price : {price} as on {purchaseDate} </p>
       <p> Buying price : ₹ {numshares*price} /- </p>
