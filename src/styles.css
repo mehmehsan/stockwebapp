@@ -6,7 +6,10 @@ body {
   background: black;
   color: white;
 }
-
+.App {
+  border: white solid;
+  border-radius: 3rem;
+}
 input,
 select {
   width: 8rem;
