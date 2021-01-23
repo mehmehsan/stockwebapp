@@ -9,10 +9,22 @@ body {
 
 input,
 select {
-  width: 5rem;
-  margin: 1rem 15rem;
+  width: 8rem;
+
+  float: right;
   background-color: grey;
   padding: 0.5rem 0.5rem;
+}
+select {
+  width: 9.1rem;
+}
+#input {
+  max-width: 85%;
+  margin: 5rem 3rem;
+}
+
+#input label {
+  float: left;
 }
 
 #output {

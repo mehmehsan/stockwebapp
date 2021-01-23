@@ -61,6 +61,7 @@ const[symb,setSymb]=useState();
   return (
     <div className="App">
       <h1>Stock Market App</h1>
+      <div id="input">
       <label> Select stock purchased : </label>
       <select onChange={(e) => setOptn(e.target.value)}>
         <option></option>
@@ -86,6 +87,7 @@ const[symb,setSymb]=useState();
       <br />
       <label> Select date of stock purchased : </label>
       <input type="date" onChange={eventHandler} />
+      </div>
     <div id="output">
       <p> Stock : {optn} </p>
       <br />
