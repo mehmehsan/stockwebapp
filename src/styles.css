@@ -5,6 +5,8 @@ body {
   text-align: center;
   background: black;
   color: white;
+  width: 30rem;
+  margin: 1.5rem auto;
 }
 .App {
   border: white solid;
@@ -26,8 +28,10 @@ select {
 }
 
 #output {
-  margin: 2rem 2rem;
+  margin: 2rem auto;
   border-radius: 2rem;
+  border: solid white;
+  width: 20rem;
   padding: 2rem 2rem;
 }
 
