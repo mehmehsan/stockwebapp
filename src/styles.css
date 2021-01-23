@@ -12,6 +12,9 @@ body {
   border: white solid 0.3rem;
   border-radius: 2rem;
 }
+h1 {
+  color: brown;
+}
 input,
 select {
   width: 8rem;
