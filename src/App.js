@@ -19,18 +19,20 @@ const[symb,setSymb]=useState();
 const[bck,setBck]=useState();
 const[fnt,setFnt]=useState();
 const[cnt,setCnt]=useState();
+const[txt,setTxt]=useState("Normal mode");
 
 function darkMode(){
  
 
 if(cnt%2!==0){
     setBck("white");
-    setFnt("black");}
+    setFnt("black");    
+    setTxt("Dark mode");}
     else{
       
     setBck("black");
     setFnt("white");
-
+    setTxt("Normal mode");
     }
     setCnt(cntt++);
 
@@ -86,7 +88,7 @@ if(cnt%2!==0){
     <div className="App" style={{background: bck,
     color:fnt }}>
      
-      <button id="outerSwitch" style={{background: fnt }}onClick={darkMode} /> 
+      <button id="outerSwitch" style={{background: fnt }}onClick={darkMode} >{txt} </button> 
 
       <br />
       <h1>

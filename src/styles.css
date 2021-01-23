@@ -34,11 +34,12 @@ select {
 }
 
 #outerSwitch {
-  height: 1.5rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 5rem;
   border-radius: 2rem;
   margin: 1rem;
   float: right;
+  color: grey;
 }
 
 svg {
