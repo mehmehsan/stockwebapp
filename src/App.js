@@ -69,7 +69,7 @@ if(cnt%2!==0){
         date=curr_year + "-" + curr_month + "-" + curr_date;
      
         
-       setcurrentPrice(data.["Time Series (Daily)"].["2021-01-21"].["4. close"]);
+       setcurrentPrice(data.["Time Series (Daily)"].[date].["4. close"]);
     
        })
     if(currentPrice>price){ plcolor ="green";
