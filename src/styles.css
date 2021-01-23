@@ -28,7 +28,6 @@ select {
 }
 
 #output {
-  border: solid white;
   margin: 2rem 2rem;
   border-radius: 2rem;
   padding: 2rem 2rem;
