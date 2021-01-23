@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 var date;
+var plcolor;
 
 function App() {
   const [optn, setOptn] = useState();
@@ -9,6 +10,7 @@ function App() {
 const[numshares, showNumshares]= useState(0);
 const[currentPrice,setcurrentPrice]=useState(0);
 const[error,showError]=useState();
+const[symb,setSymb]=useState();
 
   function quantityHandler(e){
     var numshares = e.target.value;
@@ -41,19 +43,18 @@ const[error,showError]=useState();
         date=curr_year + "-" + curr_month + "-" + curr_date;
      
         
-       setcurrentPrice(data.["Time Series (Daily)"].[date].["4. close"]);
+       setcurrentPrice(data.["Time Series (Daily)"].["2021-01-21"].["4. close"]);
     
        })
-    
+    if(currentPrice>price){ plcolor ="green";
+  setSymb("ᐃ");}
+    else{ plcolor="red";
+    setSymb("ᐁ");
+  }
       }
     )
     .catch((error)=>{showError("Prices not available for Selected data",error);
    
-
-  
-  selectPrice();
- 
-setcurrentPrice();
 })
   }
   
@@ -66,6 +67,16 @@ setcurrentPrice();
         <option> ITC </option>
         <option> INFY </option>
         <option> DABUR </option>
+        <option> MARICO </option>
+        <option> LTI </option>
+        <option> HCLTECH </option>
+        <option> ASTRAL</option>
+        <option> AARTIIND</option>
+        <option> LT</option>
+        <option> BAJFINANCE</option>
+        <option> IOLCP</option>
+        <option> HDFC</option>
+
       </select>
       <br />
       <br />
@@ -75,13 +86,15 @@ setcurrentPrice();
       <br />
       <label> Select date of stock purchased : </label>
       <input type="date" onChange={eventHandler} />
-
+    <div id="output">
       <p> Stock : {optn} </p>
+      <br />
       <p> Per Share price : {price} as on {purchaseDate} </p>
       <p> Buying price : ₹ {numshares*price} /- </p>
       <p> Current Price : ₹ {numshares*currentPrice} /- </p>
-      <p> Profit / Loss : ₹ {numshares*currentPrice-numshares*price} /- </p>
+      <p style={{color : plcolor }}>{symb} Profit / Loss : <strong> ₹ {numshares*currentPrice-numshares*price} /-</strong> </p>
       {error}
+      </div>
     </div>
   );
 }
