@@ -46,5 +46,6 @@ select {
 #innerSwitch {
   height: 1rem;
   width: 1rem;
+  background: grey;
   border-radius: 2.4rem;
 }
