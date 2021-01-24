@@ -49,7 +49,7 @@ if(cnt%2!==0){
     var purchaseDate = e.target.value;
     setpurchaseDate(purchaseDate);
     showError();
-
+    var i=0;
     var query =
     "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BSE:"+optn+"&apikey=LB6Q2SNMAOAPX513";
     
@@ -69,9 +69,13 @@ if(cnt%2!==0){
         curr_month = "0"+ curr_month;
         var curr_year = date.getFullYear();
         date=curr_year + "-" + curr_month + "-" + curr_date;
+        do{i++;
+          date=curr_year+"-"+curr_month+"-"+(curr_date-i);
+          }while(!data.["Time Series (Daily)"].[date]);
+        
      
         
-       setcurrentPrice(data.["Time Series (Daily)"].[date].["4. close"]);
+          setcurrentPrice(data.["Time Series (Daily)"].[date].["4. close"]);
     
        })
     if(currentPrice>price){ plcolor ="green";
