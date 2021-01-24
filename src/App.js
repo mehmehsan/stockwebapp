@@ -41,12 +41,14 @@ if(cnt%2!==0){
   function quantityHandler(e){
     var numshares = e.target.value;
     showNumshares(numshares);
+    showError();
   }
 
 
   function eventHandler(e) {
     var purchaseDate = e.target.value;
     setpurchaseDate(purchaseDate);
+    showError();
 
     var query =
     "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=BSE:"+optn+"&apikey=LB6Q2SNMAOAPX513";
@@ -54,7 +56,7 @@ if(cnt%2!==0){
   fetch(query)
     .then((response) => response.json())
     .then((data) =>  {
-      showError();
+     
       selectPrice((+data.["Time Series (Daily)"].[purchaseDate].["4. close"]).toFixed(3));
       
       fetch(query)
@@ -80,7 +82,7 @@ if(cnt%2!==0){
       }
     )
     .catch((error)=>{showError("Prices not available for Selected data",error);
-   
+ 
 })
   }
   

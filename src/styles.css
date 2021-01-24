@@ -46,6 +46,7 @@ select {
   float: right;
   margin: 1rem;
   color: grey;
+  outline:none;
 }
 
 #innerSwitch {
@@ -53,4 +54,5 @@ select {
   width: 1rem;
   background: grey;
   border-radius: 2.4rem;
+  outline:none;
 }
